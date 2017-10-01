@@ -1,19 +1,25 @@
-const vec3 = require('./vec3.js'),
-      primitive = require('./primitive.js'),
-      material = require('./material.js'),
-      camera = require('./camera.js'),
-      texture = require('./texture.js'),
-      HitableList = require('./hitablelist.js'),
-      ConstantMedium = require('./constantmedium.js');
+const vec3 = require('./rayt/vec3.js'),
+      noise = require('./rayt/noise.js'),
+      primitive = require('./rayt/primitive.js'),
+      material = require('./rayt/material.js'),
+      camera = require('./rayt/camera.js'),
+      texture = require('./rayt/texture.js'),
+      bvh = require('./rayt/bvh.js'),
+      extension = require('./rayt/extension.js'),
+      HitableList = require('./rayt/hitablelist.js'),
+      Scene = require('./rayt/scene.js');
 
 const rayt = {
   vec3: vec3,
+  noise: noise,
   primitive: primitive,
   material: material,
   camera: camera,
   texture: texture,
+  extension: extension,
+  bvh: bvh,
   HitableList: HitableList,
-  ConstantMedium: ConstantMedium
+  Scene: Scene
 };
 
 module.exports = rayt;
